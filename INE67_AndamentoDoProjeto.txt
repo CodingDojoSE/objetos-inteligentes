@@ -2,6 +2,10 @@ Iniciado seguindo o tutorial
 http://epos.lisha.ufsc.br/EPOS+User+Guide#Downloading_and_Installing
 
 
+
+Criado manual do Trabalho, O programa compilado está na pasta do $EPOS/app/pc_app.cc.
+
+
 Vá no virtualbox, clique no menu, Dispositivos -> Dispositivos USB -> FTDI FT232R - USB UART IC
 
 

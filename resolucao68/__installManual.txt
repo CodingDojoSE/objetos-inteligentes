@@ -1,0 +1,8 @@
+
+REMENBER, firstly run in order:
+./_copy.sh    MY_COOL_PROGRAM_NAME_WITHOUT_HYPHEN.cc
+./_make.sh    MY_COOL_PROGRAM_NAME_WITHOUT_HYPHEN.cc     use clean as 2nd parameter for a make veryclean all
+./_process.sh MY_COOL_PROGRAM_NAME_WITHOUT_HYPHEN.cc
+./_install.sh MY_COOL_PROGRAM_NAME_WITHOUT_HYPHEN.cc USB_PORT_NUMBER    if not provided, default is 0
+
+

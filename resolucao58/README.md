@@ -35,3 +35,9 @@ python red-bsl.py -t /dev/ttyUSB0 -f img/structuredLEDcontrol.bin -S
 
 Extras:
 sudo chmod 777 /dev/ttyUSB0
+
+
+Dia 24-05-16
+
+A comunicação entre placas funcionou usando o teste{Sender,Receiver}NIC.cc disponivel em ./INE5412_EposMotesII_SmartObjects/EPOS_MotesII_Lamps
+do repositorio github.com/evandrocoan/INE5412_EposMotesII_SmartObjects/tree/develop/

@@ -1,32 +1,12 @@
-
 #!/bin/sh
 
 
 # Saves the current opened path, to restore it when this scripts finish.
-installManual=$(cat "__installManual.txt")
-PWD_COMPILE_EPOS_LAMP=$(pwd)
+PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
+#import the helper functions.
+. ./__helper_functions.sh
 
-# Print help to the output stream.
-printHelp()
-{
-    echo "The start directory is $PWD_COMPILE_EPOS_LAMP"
-    echo "The current directory is $EPOS"
-    echo "$installManual"
-}
-
-# Determine whether the first parameter is an integer or not.
-#
-# Returns 1 if the specified string is an integer, otherwise returns 0.
-isInteger()
-{
-    if [ "$1" -eq "$1" ] 2>/dev/null
-    then
-        return 1
-    else
-        return 0
-    fi
-}
 
 # The EPOSMotes2 installer
 EPOS_MOTES2_INSTALLER="red-bsl.py"
@@ -40,9 +20,9 @@ programNameToCompile=$(echo $programFileToCompile | cut -d'.' -f 1)
 
 # Notify an invalid file passed as parameter.
 if ! [ -f $programFileToCompile ] \
-    || [ $# -eq 0 ]
+     || [ $# -eq 0 ]
 then
-    echo "\nERROR! Could not find $PWD_COMPILE_EPOS_LAMP/$programFileToCompile"
+    printf "\nPROCESS ERROR!\nCould not find $PWD_COMPILE_EPOS_LAMP/$programFileToCompile\n"
     printHelp
     exit 1
 fi
@@ -54,9 +34,9 @@ cd $EPOS
 # To prepare the binary file to be exported the the EPOSMotes2 board.
 if arm-objcopy -I elf32-little -O binary img/$programNameToCompile.img img/$programNameToCompile.bin
 then
-    echo "The arm-objcop $programFileToCompile was successful"
+    printf "The arm-objcop $programFileToCompile was successful\n"
 else
-    echo "ERROR! Could not to copy $programFileToCompile to $EPOS/app"
+    printf "\nPROCESS ERROR!\nCould not to copy $programFileToCompile to $EPOS/app\n"
     printHelp
     exit 1
 fi
@@ -65,11 +45,20 @@ fi
 # Switch back to the start command line folder.
 cd $PWD_COMPILE_EPOS_LAMP
 
+# Calculates whether the seconds program parameter is an integer number
+isInteger $2
+
+# Captures the return value of the previous function call command
+isIntegerReturnValue=$?
+
 # Print help when it is not passed a second command line argument integer
-if isInteger $2
+if ! [ $isIntegerReturnValue -eq 1 ]
 then
     printHelp
 fi
 
+
+# Exits the program using a successful exit status code.
+exit 0
 
 

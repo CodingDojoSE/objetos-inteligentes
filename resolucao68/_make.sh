@@ -2,51 +2,11 @@
 
 
 # Saves the current opened path, to restore it when this scripts finish.
-installManual=$(cat "__installManual.txt")
-PWD_COMPILE_EPOS_LAMP=$(pwd)
+PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
+#import the helper functions.
+. ./__helper_functions.sh
 
-# Print help to the output stream.
-printHelp()
-{
-    echo "The start directory is $PWD_COMPILE_EPOS_LAMP"
-    echo "The current directory is $EPOS"
-    echo "$installManual"
-}
-
-# contains(string, substring)
-#
-# Returns 0 if the specified string contains the specified substring,
-# otherwise returns 1.
-contains()
-{
-    string="$1"
-    substring="$2"
-    
-    if test "${string#*$substring}" != "$string"
-    then
-        return 0    # $substring is in $string
-    else
-        return 1    # $substring is not in $string
-    fi
-}
-
-# Determine whether the first parameter is an integer or not.
-#
-# Returns 1 if the specified string is an integer, otherwise returns 0.
-isInteger()
-{
-    if [ "$1" -eq "$1" ] 2>/dev/null
-    then
-        return 1
-    else
-        return 0
-    fi
-}
-
-
-# The EPOSMotes2 installer
-EPOS_MOTES2_INSTALLER="red-bsl.py"
 
 # Read the command line argument. The programs name must to be without type extension.
 programFileToCompile=$1
@@ -57,9 +17,9 @@ programNameToCompile=$(echo $programFileToCompile | cut -d'.' -f 1)
 
 # Notify an invalid file passed as parameter.
 if ! [ -f $programFileToCompile ] \
-    || [ $# -eq 0 ]
+     || [ $# -eq 0 ]
 then
-    echo "\nERROR! Could not find $PWD_COMPILE_EPOS_LAMP/$programFileToCompile"
+    printf "\nMAKE ERROR:\n Could not find $PWD_COMPILE_EPOS_LAMP/$programFileToCompile\n"
     printHelp
     exit 1
 fi
@@ -68,8 +28,14 @@ fi
 cd $EPOS
 
 
+# Calculates whether the seconds program parameter contains the clean word
+contains $2 "clean"
+
+# Captures the return value of the previous function call command
+containsReturnValue=$?
+
 # To clear any last compilation data.
-if contains $2 "clean"
+if ! [ $containsReturnValue -eq 1 ]
 then
     make veryclean all
     cd $PWD_COMPILE_EPOS_LAMP
@@ -81,15 +47,19 @@ fi
 
 
 # To compile the application passed as parameter '$programNameToCompile'
-make APPLICATION=$programNameToCompile
+if ! make APPLICATION=$programNameToCompile
+then
+    printf "\nMAKE ERROR:\nThe start directory is $PWD_COMPILE_EPOS_LAMP\n"
+    printf "The current directory is $EPOS\n"
+    printHelp
+    exit 1
+fi
+
 
 # Switch back to the start command line folder.
 cd $PWD_COMPILE_EPOS_LAMP
 
-# Print help when it is not passed a third command line argument integer
-if isInteger $3
-then
-    printHelp
-fi
+# Exits the program using a successful exit status code.
+exit 0
 
 

@@ -1,14 +1,8 @@
 Iniciado seguindo o tutorial
 http://epos.lisha.ufsc.br/EPOS+User+Guide#Downloading_and_Installing
 
-
-
 Criado manual do Trabalho, O programa compilado está na pasta do $EPOS/app/pc_app.cc.
-
-
 Vá no virtualbox, clique no menu, Dispositivos -> Dispositivos USB -> FTDI FT232R - USB UART IC
-
-
 Adicionar caminho para o EPOS
 Adicionar o caminho no PATH para o EPOS e para o arm/gcc
 Acessar pasta do EPOS
@@ -25,13 +19,19 @@ arm-objcopy -I elf32-little -O binary img/structuredLEDcontrol.img img/structure
 cp tools/emote/ssl.bin
 cp tools/emote/red-bsl.py
 
-
 Para colocar para a placa, em sua memória flash:
 python red-bsl.py -t /dev/ttyUSB0 -f img/structuredLEDcontrol.bin -S
 
-
-
-
-
 Extras:
 sudo chmod 777 /dev/ttyUSB0
+
+
+#ATUALIZAÇÃO 26/05/2016: Para compilar e instalar o programa
+
+Siga o manual na nossa primeiro página do github:
+https://github.com/CodingDojoSE/objetos-inteligentes
+
+
+
+
+

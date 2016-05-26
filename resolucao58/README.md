@@ -30,7 +30,10 @@ neste repositório, que foram baixar originalmente de:
 https://github.com/evandrocoan/INE5412_EposMotesII_SmartObjects/tree/develop/
 
 
+#ATUALIZAÇÃO 26/05/2016: Para compilar e instalar o programa
 
+Siga o manual na nossa primeiro página do github:
+https://github.com/CodingDojoSE/objetos-inteligentes
 
 
 

@@ -1,6 +1,3 @@
-
-
-
 Nos compilarmos utilizando:
 make APPLICATION=objetos-inteligentes/resolucao73/structuredLEDControl
 
@@ -17,11 +14,7 @@ para enviar a imagem para o EPOSMotesII.
 
 Foi solicitado que o EPOSMotesII fosse resetado pelo botão, feito isso a aplicação foi enviada e rodou conforme o esperado.
 
-
-
-
-17-05-16:
-
+#17-05-16:
 Foi copiado o codigo do https://epos.lisha.ufsc.br/EPOS+User+Guide#UART e alterado (app/uartTest.cc), com ele conseguimos ver uma resposta da uart, basicamente o que o cout estava printando
 Usando o terminal minicom com baud 9600;
 $make APPLICATION=uartTest
@@ -33,4 +26,9 @@ $python red-bsl.py -t /dev/ttyUSB0 -f img/tempsens.bin -S
 
 :)
 
+
+#ATUALIZAÇÃO 26/05/2016: Para compilar e instalar o programa
+
+Siga o manual na nossa primeiro página do github:
+https://github.com/CodingDojoSE/objetos-inteligentes
 

@@ -29,6 +29,8 @@
 
 /**
  * This is to view internal program data while execution. Default value: 0
+ * The biggest string to output at once by the EPOSMotes2 within multiple PRINTLN, cout, etc is
+ * 127 chars long.
  * 
  *  0   = Disables this feature.
  *  1  >= Basic debugging.
@@ -121,7 +123,7 @@ while( 0 )
 /**
  * The same as DEBUGGER(...), but it is for standard program output.
  */
-#define FPRINT( level, ... ) \
+#define PRINT( level, ... ) \
 do \
 { \
     if( __computeDeggingLevel( #level ) ) \
@@ -136,7 +138,7 @@ while( 0 )
 /**
  * The same as DEBUGGERLN(...), but it is for standard program output.
  */
-#define FPRINTLN( level, ... ) \
+#define PRINTLN( level, ... ) \
 do \
 { \
     if( __computeDeggingLevel( #level ) ) \
@@ -381,7 +383,7 @@ inline bool __computeDeggingLevel( const char* debugLevel )
 /**
  * The same as DEBUGGER(...), but it is for standard program output when the debugging is disabled.
  */
-#define FPRINT( level, ... ) \
+#define PRINT( level, ... ) \
 do \
 { \
     cout << __VA_ARGS__; \
@@ -392,7 +394,7 @@ while( 0 )
 /**
  * The same as DEBUGGERLN(...), but it is for standard program output when the debugging is disabled.
  */
-#define FPRINTLN( level, ... ) \
+#define PRINTLN( level, ... ) \
 do \
 { \
     cout << __VA_ARGS__ << "\n"; \

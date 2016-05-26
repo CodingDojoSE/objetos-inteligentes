@@ -22,8 +22,10 @@ computerUSBNumber=$2
 if [ $# -gt 2 ]
 then
     installerFlags=""
+    printf "Sending the program to the RAM Memory!\n"
 else
     installerFlags="-S"
+    printf "Sending the program to the FLASH Memory!\n"
 fi
 
 

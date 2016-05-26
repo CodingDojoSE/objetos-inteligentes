@@ -19,7 +19,7 @@ Examples:
 ./compile_and_install.sh PROGRAM_NAME.cc 1
 ```
 The 'compile_and_install.sh' is a wrapper which calls the following programs to perform
-the program required steps. These steps to be performed run in following order:
+the program required steps. These steps must to be performed run in following order:
 ```
 ./_copy.sh    PROGRAM_NAME.cc
 ./_make.sh    PROGRAM_NAME.cc OPTION_NAME           Use 'clean' as 2nd parameter to perform a make veryclean all.

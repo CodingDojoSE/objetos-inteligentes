@@ -18,13 +18,16 @@ Examples:
 ./compile_and_install.sh PROGRAM_NAME.cc 0 clean
 ./compile_and_install.sh PROGRAM_NAME.cc 1
 ```
+
 The 'compile_and_install.sh' is a wrapper which calls the following programs to perform
 the program required steps. These steps must to be performed run in following order:
 ```
 ./_copy.sh    PROGRAM_NAME.cc
 ./_make.sh    PROGRAM_NAME.cc OPTION_NAME           Use 'clean' as 2nd parameter to perform a make veryclean all.
-./_process.sh PROGRAM_NAME.cc ANYTHIN...            If passed anything, to install the program to the RAM memory, instead of the flash memory.
-./_install.sh PROGRAM_NAME.cc USB_PORT_NUMBER       If not provided, default is 0.
-
+./_process.sh PROGRAM_NAME.cc
+./_install.sh PROGRAM_NAME.cc USB_PORT_NUMBER     If not provided, default is 0. If passed more than 2 parameters,
+                                                  to install the program to the RAM memory, instead of the flash
+                                                  memory.
+```
 
 

@@ -2,7 +2,7 @@
 
 
 # Import the helper functions.
-. ./files/__helper_functions.sh
+. ./installer_files/__helper_functions.sh
 
 # Read the command line argument. The programs name must to be without type extension.
 programFileToCompile=$1
@@ -36,7 +36,7 @@ if ! [ $containsReturnValue -eq 1 ]
 then
     make veryclean all
     cd $PWD_COMPILE_EPOS_LAMP
-    sh _copy.sh structuredLEDControl.cc 0
+    sh _copy.sh $programFileToCompile 0
     cd $EPOS
 else
     make

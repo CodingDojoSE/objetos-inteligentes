@@ -4,9 +4,12 @@
 PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
 # Import the helper functions.
-. ./files/__helper_functions.sh
+. ./installer_files/__helper_functions.sh
 
 # Change log
+# 
+# v1.1.1
+# Placed the compiler files into the folder 'installer_files'.
 # 
 # v1.1
 # Placed the non-executable files into the folder 'files'.
@@ -33,9 +36,6 @@ printHelp()
     printf "./compile_and_install.sh PROGRAM_NAME.cc 1\n"
 }
 
-
-# The default file name to compile when no arguments are provided
-defaultFileToCompile="structuredLEDControl.cc"
 
 # Read the command line argument. The programs name must to be without type extension.
 programFileToCompile=$1

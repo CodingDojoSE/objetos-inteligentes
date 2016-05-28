@@ -2,13 +2,13 @@
 
 
 # Import the helper functions.
-. ./files/__helper_functions.sh
+. ./installer_files/__helper_functions.sh
 
 # The new Trait.h file to changes the compiler scheduler
-NEW_SCHEDULER_FILE="$PWD_COMPILE_EPOS_LAMP/files/traits.h"
-NEW_EPOS_COMPILER_FILE="$PWD_COMPILE_EPOS_LAMP/files/eposcc"
-NEW_EPOS_MAKEDEFS_FILE="$PWD_COMPILE_EPOS_LAMP/files/makedefs"
-NEW_EPOS_PLASMA_MAKEFILE_FILE="$PWD_COMPILE_EPOS_LAMP/files/makefile_plasma"
+NEW_SCHEDULER_FILE="$PWD_COMPILE_EPOS_LAMP/installer_files/traits.h"
+NEW_EPOS_COMPILER_FILE="$PWD_COMPILE_EPOS_LAMP/installer_files/eposcc"
+NEW_EPOS_MAKEDEFS_FILE="$PWD_COMPILE_EPOS_LAMP/installer_files/makedefs"
+NEW_EPOS_PLASMA_MAKEFILE_FILE="$PWD_COMPILE_EPOS_LAMP/installer_files/makefile_plasma"
 
 # Read the command line argument. The programs name must to be without type extension.
 programFileToCompile=$1
@@ -16,6 +16,7 @@ secondCommandLineArgument=$2
 
 # Removed the file extension, just in case there exists.
 programNameToCompile=$(echo $programFileToCompile | cut -d'.' -f 1)
+
 
 # Notify when $EPOS environment variable is not found.
 if ! [ -f $EPOS/tools/makefile ]
@@ -43,9 +44,9 @@ fi
 # To install the new scheduler.
 if cp $NEW_SCHEDULER_FILE $EPOS/include/
 then
-    printf "The copy of 'NEW_SCHEDULER_FILE' to '$EPOS/include' was successful\n"
+    printf "The copy of 'NEW_SCHEDULER_FILE' to '$EPOS/include/' was successful\n"
 else
-    printf "\nCOPY ERROR!\nCould not to copy '$NEW_SCHEDULER_FILE' to '$EPOS/include'\n"
+    printf "\nCOPY ERROR!\nCould not to copy '$NEW_SCHEDULER_FILE' to '$EPOS/include/'\n"
     printHelp
     exit 1
 fi
@@ -56,7 +57,7 @@ if cp $NEW_EPOS_COMPILER_FILE $EPOS/tools/eposcc/
 then
     printf "The copy of 'NEW_EPOS_COMPILER_FILE' to '$EPOS/tools/eposcc/' was successful\n"
 else
-    printf "\nCOPY ERROR!\nCould not to copy '$NEW_EPOS_COMPILER_FILE' to '$EPOS/include'\n"
+    printf "\nCOPY ERROR!\nCould not to copy '$NEW_EPOS_COMPILER_FILE' to '$EPOS/tools/eposcc/'\n"
     printHelp
     exit 1
 fi
@@ -91,9 +92,9 @@ then
     # --quiet | Do not print the number of blocks copied
     find . -name '*.cc' | cpio -updm --quiet $EPOS/app/
     find . -name '*.h' | cpio -updm --quiet $EPOS/include/
-    printf "The copy of '$programFileToCompile' and it dependents files to '$EPOS/app' was successful\n"
+    printf "The copy of '$programFileToCompile' and it dependents files to '$EPOS/app/' was successful\n"
 else
-    printf "\nCOPY ERROR!\nCould not to copy '$programFileToCompile' to '$EPOS/app'\n"
+    printf "\nCOPY ERROR!\nCould not to copy '$programFileToCompile' to '$EPOS/app/'\n"
     printHelp
     exit 1
 fi

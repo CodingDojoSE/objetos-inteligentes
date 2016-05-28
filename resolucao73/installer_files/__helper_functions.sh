@@ -4,10 +4,10 @@
 export PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
 # Read the general tools system manual file.
-installManual=$(cat "$PWD_COMPILE_EPOS_LAMP/files/__install_manual.txt")
+installManual=$(cat "$PWD_COMPILE_EPOS_LAMP/installer_files/__install_manual.txt")
 
 # The time flag file path
-updateFlagFilePath="$PWD_COMPILE_EPOS_LAMP/files/epos_flag_file.txt"
+updateFlagFilePath="$PWD_COMPILE_EPOS_LAMP/installer_files/epos_flag_file.txt"
 
 # Save the current seconds
 if ! [ -f $updateFlagFilePath ]

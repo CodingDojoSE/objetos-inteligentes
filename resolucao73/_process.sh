@@ -2,7 +2,7 @@
 
 
 # Import the helper functions.
-. ./files/__helper_functions.sh
+. ./installer_files/__helper_functions.sh
 
 # The EPOSMotes2 installer
 EPOS_MOTES2_INSTALLER="red-bsl.py"

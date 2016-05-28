@@ -2,7 +2,7 @@
 
 
 # Import the helper functions.
-. ./files/__helper_functions.sh
+. ./installer_files/__helper_functions.sh
 
 # The EPOSMotes2 installer
 EPOS_MOTES2_INSTALLER="red-bsl.py"
@@ -12,6 +12,7 @@ EPOS_MOTES2_INSTALLER_BINARY2="ssl.bin"
 # Read the command line argument. The programs name must to be without type extension.
 programFileToCompile=$1
 computerUSBNumber=$2
+
 
 # Read the EPOSMotes2 installer flags, if omitted, use as default one '-S' to write the program
 # to the flash memory.

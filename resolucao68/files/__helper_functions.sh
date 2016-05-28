@@ -1,11 +1,13 @@
 #!/bin/sh
 
+# Saves the current opened path, to restore it when this scripts finish.
+export PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
 # Read the general tools system manual file.
-installManual=$(cat "__install_manual.txt")
+installManual=$(cat "$PWD_COMPILE_EPOS_LAMP/files/__install_manual.txt")
 
 # The time flag file path
-updateFlagFilePath="/home/$USER/epos_flag_file.txt"
+updateFlagFilePath="$PWD_COMPILE_EPOS_LAMP/files/epos_flag_file.txt"
 
 # Save the current seconds
 if ! [ -f $updateFlagFilePath ]
@@ -14,7 +16,7 @@ then
     export scriptStartSecond=$(date +%s.%N)
     
     # Create a flag file to avoid override the initial time.
-    echo "The EPOS 1.1 time flag" > $updateFlagFilePath
+    echo "The EPOS 1.1 time flag." > $updateFlagFilePath
 fi
 
 
@@ -24,13 +26,13 @@ showTheElapsedSeconds()
     cleanUpdateFlagFile
     
     # Calculates whether the seconds program parameter is an integer number
-    isInteger $scriptStartSecond
+    isFloatNumber $scriptStartSecond
     
     # Captures the return value of the previous function call command
-    isIntegerReturnValue=$?
+    isFloat_returnValue=$?
     
     # Print help when it is not passed a second command line argument integer
-    if ! [ $isIntegerReturnValue -eq 1 ]
+    if [ $isFloat_returnValue -eq 1 ]
     then
         scripExecutionTimeResult=$(awk "BEGIN {printf \"%.2f\",$(date +%s.%N)-$scriptStartSecond}")
         printf "Took '$scripExecutionTimeResult' seconds to run this script.\n"
@@ -88,6 +90,45 @@ isInteger()
 }
 
 
+# Determine whether the first parameter is an integer or not.
+#
+# Returns 1 if the specified string is an integer, otherwise returns 0.
+isFloatNumber()
+{
+    # Calculates whether the first function parameter $1 is a number
+    isEmpty $1
+    
+    # Captures the return value of the previous function call command
+    isEmptyReturnValue=$?
+    
+    # Notify an invalid USB port number passed as parameter.
+    if ! [ $isEmptyReturnValue -eq 1 ]
+    then
+        # Removed the file extension, just in case there exists.
+        firstFloatNumberPart=$(echo $1 | cut -d'.' -f 1)
+        secondFloatNumberPart=$(echo $1 | cut -d'.' -f 2)
+        
+        # Checks whether the first float number part is an integer.
+        isInteger $firstFloatNumberPart
+        
+        if ! [ $# -eq 1 ]
+        then
+            return 0
+        fi
+        
+        # Checks whether the second float number part is an integer.
+        isInteger $secondFloatNumberPart
+        
+        if [ $# -eq 1 ]
+        then
+            return 1
+        fi
+    fi
+    
+    return 0
+}
+
+
 # Print help to the output stream.
 printHelp()
 {
@@ -105,10 +146,10 @@ tryPrintHelp()
     isInteger $1
     
     # Captures the return value of the previous function call command
-    isIntegerReturnValue=$?
+    isInteger_returnValue=$?
     
     # Print help when it is not passed a second command line argument integer
-    if ! [ $isIntegerReturnValue -eq 1 ]
+    if ! [ $isInteger_returnValue -eq 1 ]
     then
         printHelp
     fi

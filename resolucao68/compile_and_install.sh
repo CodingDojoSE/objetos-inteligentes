@@ -4,10 +4,18 @@
 PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
 # Import the helper functions.
-. ./__helper_functions.sh
+. ./files/__helper_functions.sh
 
-# Current Version
-COMPILE_AND_INSTALL_VERSION="1.0"
+# Change log
+# 
+# v1.1
+# Placed the non-executable files into the folder 'files'.
+# Fixed the 'showTheElapsedSeconds' not showing correctly the time.
+# 
+# v1.0
+# Initial release.
+# 
+COMPILE_AND_INSTALL_VERSION="1.1"
 
 printf "Running the script './compile_and_install.sh' version $COMPILE_AND_INSTALL_VERSION...\n"
 
@@ -53,7 +61,7 @@ fi
 # Notify an invalid file passed as parameter.
 if ! [ -f $programFileToCompile ]
 then
-    printf "\nERROR! Could not to find your program $programFileToCompile!\n"
+    printf "\nERROR! Could not to find your program '$programFileToCompile'!\n"
     printf "Please try again providing an correct program. Example:\n"
     printf "./compile.sh PROGRAM_NAME.cc\n"
     printHelp

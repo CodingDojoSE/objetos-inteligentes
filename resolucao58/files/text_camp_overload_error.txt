@@ -1,0 +1,602 @@
+The copy of 'traits.h' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/include' was successful
+The copy of 'eposcc' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposcc/' was successful
+The copy of 'makedefs' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/' was successful
+The copy of 'makefile_plasma' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/plasma/makefile' was successful
+The copy of 'structuredLEDControl.cc' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/app' was successful
+make: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC'
+make MAKE:="make -i clean" etc tools src app img
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC'
+(cd etc && make -i clean)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/etc'
+rm -f *.conf
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/etc'
+(cd tools && make -i clean)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools'
+make MAKE:="make -i clean" emote eposcc eposldr eposmkbi plasma xilinx
+make[3]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools'
+(cd emote && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/emote'
+make[4]: Nothing to be done for `clean'.
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/emote'
+(cd eposcc && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposcc'
+make[4]: Nothing to be done for `clean'.
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposcc'
+(cd eposldr && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposldr'
+rm -f *.o eposldr
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposldr'
+(cd eposmkbi && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposmkbi'
+rm -f *.o eposmkbi
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposmkbi'
+(cd plasma && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/plasma'
+rm -rf  *.o *.obj *.map *.lst *.hex *.txt *.exe *.axf
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/plasma'
+(cd xilinx && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/xilinx'
+make[4]: *** No rule to make target `clean'.  Stop.
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/xilinx'
+make[3]: [xilinx] Error 2 (ignored)
+make[3]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools'
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools'
+(cd src && make -i clean)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src'
+make MAKE:="make -i clean" utility arch mach abstraction setup boot system init
+make[3]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src'
+(cd utility && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/utility'
+rm -f *.o *_test
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/utility'
+(cd arch && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch'
+make MAKE:="make -i clean" arm7
+make[5]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch'
+(cd arm7 && make -i clean)
+make[6]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch/arm7'
+rm -f *.o *.s *_test
+make[6]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch/arm7'
+make[5]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch'
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch'
+(cd mach && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach'
+make MAKE:="make -i clean" common mc13224v
+make[5]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach'
+(cd common && make -i clean)
+make[6]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/common'
+rm -f *.o
+make[6]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/common'
+(cd mc13224v && make -i clean)
+make[6]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/mc13224v'
+rm -f *.o *_test
+make[6]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/mc13224v'
+make[5]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach'
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach'
+(cd abstraction && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/abstraction'
+rm -f *.o *_test
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/abstraction'
+(cd setup && make -i clean)
+find: `mc13224v*': No such file or directory
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/setup'
+rm -f *.o *_setup
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/setup'
+(cd boot && make -i clean)
+find: `mc13224v*': No such file or directory
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/boot'
+rm -f *.s *.o *_boot *.tmp
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/boot'
+(cd system && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/system'
+rm -f *.o *_system
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/system'
+(cd init && make -i clean)
+make[4]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/init'
+rm -f *.o *_init
+make[4]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/init'
+make[3]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src'
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src'
+(cd app && make -i clean)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/app'
+rm -f *.o mc13224v_app
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/app'
+(cd img && make -i clean)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/img'
+rm -f *_boot *_setup *_init *_system mc13224v_app 
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/img'
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC'
+find /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib -maxdepth 1 -type f -exec rm -f {} \;
+find /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin -maxdepth 1 -type f -exec rm -f {} \;
+find /home/mint32bits/Desktop/OpenEPOS-1.1RC/app -maxdepth 1 -type f -perm +111 -exec rm -f {} \;
+find /home/mint32bits/Desktop/OpenEPOS-1.1RC/img -name "*.img" -exec rm -f {} \;
+find /home/mint32bits/Desktop/OpenEPOS-1.1RC/img -name "*.out" -exec rm -f {} \;
+find /home/mint32bits/Desktop/OpenEPOS-1.1RC -name "*~" -exec rm -f {} \; 
+(cd etc && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/etc'
+sed -e 's/^#define ARCH.*$/#define ARCH arm7/' -i /home/mint32bits/Desktop/OpenEPOS-1.1RC/include/system/config.h
+sed -e 's/^#define MACH.*$/#define MACH mc13224v/' -i /home/mint32bits/Desktop/OpenEPOS-1.1RC/include/system/config.h
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/etc'
+(cd tools && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools'
+(cd emote && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/emote'
+install -m 775 red-bsl.py ssl.bin /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/emote'
+(cd eposcc && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposcc'
+install -m 775 eposcc /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin
+sed -e 's/^EPOS=.*$/EPOS=\/home\/mint32bits\/Desktop\/OpenEPOS-1.1RC/' -i /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin/eposcc
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposcc'
+(cd eposldr && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposldr'
+g++ -c -ansi -fno-exceptions -m32 -Wall -O2 -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include eposldr.cc
+eposldr.cc: In function ‘int main(int, char**)’:
+eposldr.cc:83:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   printf("\nSending %d bytes...\n", file_size);
+                                              ^
+eposldr.cc:109:34: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+       write(STDOUT_FILENO, &a, 1);
+                                  ^
+gcc -m32 -o eposldr eposldr.o
+install eposldr /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposldr'
+(cd eposmkbi && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposmkbi'
+g++ -c -ansi -fno-exceptions -m32 -Wall -O2 -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include eposmkbi.cc
+eposmkbi.cc: In function ‘bool parse_config(FILE*, Configuration*)’:
+eposmkbi.cc:251:12: warning: variable ‘ret’ set but not used [-Wunused-but-set-variable]
+     char * ret;
+            ^
+gcc -m32 -o eposmkbi eposmkbi.o
+install -m 775 eposmkbi /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposmkbi'
+(cd plasma && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/plasma'
+convert.c: In function ‘main’:
+convert.c:98:26: warning: variable ‘bss_end’ set but not used [-Wunused-but-set-variable]
+    uint32 bss_start = 0, bss_end = 0;
+                          ^
+convert.c:96:9: warning: variable ‘size’ set but not used [-Wunused-but-set-variable]
+    long size, stack_pointer;
+         ^
+ram_image.c: In function ‘main’:
+ram_image.c:69:13: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(file, "%x", &code[count]);
+             ^
+make targets = count, opcodes, pi, test, run, tohex,bootldr, toimage, eterm
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/plasma'
+(cd xilinx && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/xilinx'
+Nothing to do here
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/xilinx'
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools'
+(cd src && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src'
+(cd utility && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/utility'
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include elf.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libutil_arm7.a elf.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include heap.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libutil_arm7.a heap.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include malloc.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libutil_arm7.a malloc.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include observer.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libutil_arm7.a observer.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include ostream.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libutil_arm7.a ostream.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include random.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libutil_arm7.a random.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include srec.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libutil_arm7.a srec.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include string.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libutil_arm7.a string.o
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/utility'
+(cd arch && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch'
+(cd arm7 && make)
+make[3]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch/arm7'
+/usr/local/arm/gcc/bin/arm-gcc -E -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include arm7_crt1.S -o arm7_crt1.s
+/usr/local/arm/gcc/bin/arm-as -mcpu=arm7tdmi-s --defsym mc13224v=1 -mthumb-interwork arm7_crt1.s -o arm7_crt1.o
+/usr/local/arm/gcc/bin/arm-gcc -E -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include arm7_crtbegin.S -o arm7_crtbegin.s
+/usr/local/arm/gcc/bin/arm-as -mcpu=arm7tdmi-s --defsym mc13224v=1 -mthumb-interwork arm7_crtbegin.s -o arm7_crtbegin.o
+/usr/local/arm/gcc/bin/arm-gcc -E -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include arm7_crtend.S -o arm7_crtend.s
+/usr/local/arm/gcc/bin/arm-as -mcpu=arm7tdmi-s --defsym mc13224v=1 -mthumb-interwork arm7_crtend.s -o arm7_crtend.o
+/usr/local/arm/gcc/bin/arm-gcc -E -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include arm7_crti.S -o arm7_crti.s
+/usr/local/arm/gcc/bin/arm-as -mcpu=arm7tdmi-s --defsym mc13224v=1 -mthumb-interwork arm7_crti.s -o arm7_crti.o
+/usr/local/arm/gcc/bin/arm-gcc -E -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include arm7_crtn.S -o arm7_crtn.s
+/usr/local/arm/gcc/bin/arm-as -mcpu=arm7tdmi-s --defsym mc13224v=1 -mthumb-interwork arm7_crtn.s -o arm7_crtn.o
+install arm7_crt1.o arm7_crtbegin.o arm7_crtend.o arm7_crti.o arm7_crtn.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include arm7_setup.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libarch_arm7.a arm7_setup.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include -fomit-frame-pointer cpu.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libarch_arm7.a cpu.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include exception.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libarch_arm7.a exception.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include mmu.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libarch_arm7.a mmu.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include tsc.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libarch_arm7.a tsc.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include cpu_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a cpu_init.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include mmu_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a mmu_init.o
+make[3]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch/arm7'
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch'
+(cd mach && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach'
+(cd common && make)
+make[3]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/common'
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include cmac.cc
+In file included from /home/mint32bits/Desktop/OpenEPOS-1.1RC/include/mach/mc13224v/nic.h:13,
+                 from /home/mint32bits/Desktop/OpenEPOS-1.1RC/include/mach/mc13224v/machine.h:78,
+                 from /home/mint32bits/Desktop/OpenEPOS-1.1RC/include/machine.h:25,
+                 from cmac.cc:9:
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/cmac.h: In static member function 'static void System::Generic_Lpl< <template-parameter-1-1> >::_event_handler(typename T::Event) [with T = System::Radio_Wrapper]':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/cmac.h:682:   instantiated from 'static typename System::CMAC<T>::CMAC_STATE_TRANSITION System::Generic_Lpl< <template-parameter-1-1> >::execute(typename System::CMAC<T>::CMAC_STATE_TRANSITION, long unsigned int) [with T = System::Radio_Wrapper]'
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/cmac.h:521:   instantiated from 'static typename System::CMAC<T>::CMAC_STATE_TRANSITION System::Asynchronous_Sync< <template-parameter-1-1> >::execute(typename System::CMAC<T>::CMAC_STATE_TRANSITION) [with T = System::Radio_Wrapper]'
+cmac.cc:46:   instantiated from here
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/cmac.h:719: warning: comparison between 'enum System::MC13224V_Transceiver::Event' and 'enum System::Radio_Wrapper::<anonymous>'
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h: In static member function 'static bool System::ARM7::tsl(volatile bool&)':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h:165: warning: 'old' is used uninitialized in this function
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a cmac.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include cmac_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a cmac_init.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include ethernet.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a ethernet.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include neighboring.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a neighboring.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include radio_common.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a radio_common.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include rtc_common.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a rtc_common.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include serial_display.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a serial_display.o
+make[3]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/common'
+(cd mc13224v && make)
+make[3]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/mc13224v'
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include battery.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a battery.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include buck_regulator.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a buck_regulator.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include ertj1vg103fa.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a ertj1vg103fa.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include flash.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a flash.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include ic.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a ic.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include machine.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a machine.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include radio.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a radio.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include timer.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a timer.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include transceiver.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a transceiver.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include uart.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libmach_arm7.a uart.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include battery_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a battery_init.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include machine_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a machine_init.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include nic_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a nic_init.o
+make[3]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/mc13224v'
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach'
+(cd abstraction && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/abstraction'
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include alarm.cc
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h: In static member function 'static bool System::ARM7::tsl(volatile bool&)':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h:165: warning: 'old' is used uninitialized in this function
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a alarm.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include cpu_affinity_scheduler.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a cpu_affinity_scheduler.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include dhcp.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a dhcp.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include icmp.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a icmp.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include ieee1451_ncap.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a ieee1451_ncap.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include ieee1451_tim.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a ieee1451_tim.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include ip.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a ip.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include loopback.cc
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h: In static member function 'static bool System::ARM7::tsl(volatile bool&)':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h:165: warning: 'old' is used uninitialized in this function
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a loopback.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include network.cc
+In file included from network.cc:10:
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h: In constructor 'System::Network::Network()':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h:59: warning: large integer implicitly truncated to unsigned type
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h:60: warning: large integer implicitly truncated to unsigned type
+network.cc: In member function 'int System::Network::send(const System::Network::Address&, const void*, unsigned int)':
+network.cc:29: warning: large integer implicitly truncated to unsigned type
+network.cc: In member function 'System::NIC_Common::Address<1u> System::Network::arp(const System::Network::Address&)':
+network.cc:68: warning: large integer implicitly truncated to unsigned type
+network.cc: In member function 'System::Network::Address System::Network::rarp(const System::NIC_Common::Address<1u>&)':
+network.cc:94: warning: large integer implicitly truncated to unsigned type
+network.cc: In member function 'virtual void System::Network::update(System::Conditionally_Observed*, int)':
+network.cc:120: warning: dereferencing type-punned pointer will break strict-aliasing rules
+network.cc:127: warning: large integer implicitly truncated to unsigned type
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h: In function '(static initializers for network.cc)':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h:26: warning: dereferencing pointer 'this.121' does break strict-aliasing rules
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h:26: note: initialized from here
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h: In member function 'System::Network::Address System::Network::rarp(const System::NIC_Common::Address<1u>&)':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h:26: warning: dereferencing pointer 'this.121' does break strict-aliasing rules
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h:26: note: initialized from here
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h:26: warning: dereferencing pointer 'this.121' does break strict-aliasing rules
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/network.h:26: note: initialized from here
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/utility/ostream.h: In member function 'virtual void System::Network::update(System::Conditionally_Observed*, int)':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/utility/ostream.h:60: warning: 'prot' is used uninitialized in this function
+network.cc:113: note: 'prot' was declared here
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a network.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include sip_body.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a sip_body.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include sip_defs.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a sip_defs.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include sip_header.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a sip_header.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include sip_manager.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a sip_manager.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include sip_message.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a sip_message.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include sip_transactions.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a sip_transactions.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include sip_user_agent.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a sip_user_agent.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include slip.cc
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h: In static member function 'static bool System::ARM7::tsl(volatile bool&)':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h:165: warning: 'old' is used uninitialized in this function
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a slip.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include tcp.cc
+tcp.cc: In member function 'bool System::TCP::Channel::close()':
+tcp.cc:744: warning: suggest parentheses around '&&' within '||'
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a tcp.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include thread.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a thread.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include udp.cc
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h: In static member function 'static bool System::ARM7::tsl(volatile bool&)':
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/include/arch/arm7/cpu.h:165: warning: 'old' is used uninitialized in this function
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libsystem_arm7.a udp.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include alarm_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a alarm_init.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include system_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a system_init.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include task_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a task_init.o
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include thread_init.cc
+/usr/local/arm/gcc/bin/arm-ar rcs /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib/libinit_arm7.a thread_init.o
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/abstraction'
+(cd setup && make)
+find: `mc13224v*': No such file or directory
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/setup'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/setup'
+(cd boot && make)
+find: `mc13224v*': No such file or directory
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/boot'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/boot'
+(cd system && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/system'
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include application_scaffold.cc
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include system_scaffold.cc
+install system_scaffold.o mc13224v_system.o
+install application_scaffold.o mc13224v_application.o
+install mc13224v_system.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+install mc13224v_application.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/system'
+(cd init && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/init'
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include init_application.cc
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include init_first.cc
+/usr/local/arm/gcc/bin/arm-g++ -c --no-exceptions --no-rtti --no-use-cxa-atexit  -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -O2 -nostdinc -Wall -fdata-sections -ffunction-sections -I/home/mint32bits/Desktop/OpenEPOS-1.1RC/include init_system.cc
+install init_first.o mc13224v_init_first.o
+install init_system.o mc13224v_init_system.o
+install init_application.o mc13224v_init_application.o
+install mc13224v_init_first.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+install mc13224v_init_system.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+install mc13224v_init_application.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/init'
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src'
+(cd app && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/app'
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/bin/eposcc -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -c -ansi -O2  -o mc13224v_app.o mc13224v_app.cc
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/bin/eposcc --library  --gc-sections -o mc13224v_app mc13224v_app.o
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_udivsi3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_divsi3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_umodsi3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_dvmd_tls.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_addsubdf3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_muldivdf3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_fixunsdfsi.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_truncdfsf2.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_addsubsf3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_muldivsf3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_cmpsf2.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_fixsfsi.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_udivdi3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_umoddi3.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_clzsi2.o) does not support interworking, whereas mc13224v_app does
+/usr/local/arm/gcc/bin/arm-strip -R .note -R .comment -o mc13224v_app.tmp mc13224v_app
+install mc13224v_app.tmp /home/mint32bits/Desktop/OpenEPOS-1.1RC/img/mc13224v_app
+rm -f mc13224v_app.tmp
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/app'
+(cd img && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/img'
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/bin/eposmkbi /home/mint32bits/Desktop/OpenEPOS-1.1RC mc13224v_app.img mc13224v_app
+
+EPOS bootable image tool
+
+  EPOS mode: library
+  Machine: mc13224v
+  Processor: arm7 (32 bits, little endian)
+  Memory: 96 KBytes
+  Boot Length: 128 - 512 (min - max) KBytes
+  Node id: will get from the network
+
+  Creating EPOS bootable image in "mc13224v_app.img":
+    Adding boot strap "/home/mint32bits/Desktop/OpenEPOS-1.1RC/img/mc13224v_boot": failed! (open)
+    Adding setup "/home/mint32bits/Desktop/OpenEPOS-1.1RC/img/mc13224v_setup": failed! (open)
+    Adding application "mc13224v_app": done.
+
+  Adding specific boot features of "mc13224v": done.
+
+  Image successfully generated (66388 bytes)!
+
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/img'
+make: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC'
+The copy of 'traits.h' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/include' was successful
+The copy of 'eposcc' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposcc/' was successful
+The copy of 'makedefs' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/' was successful
+The copy of 'makefile_plasma' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/plasma/makefile' was successful
+The copy of 'structuredLEDControl.cc' to '/home/mint32bits/Desktop/OpenEPOS-1.1RC/app' was successful
+make: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC'
+(cd etc && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/etc'
+sed -e 's/^#define ARCH.*$/#define ARCH arm7/' -i /home/mint32bits/Desktop/OpenEPOS-1.1RC/include/system/config.h
+sed -e 's/^#define MACH.*$/#define MACH mc13224v/' -i /home/mint32bits/Desktop/OpenEPOS-1.1RC/include/system/config.h
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/etc'
+(cd tools && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools'
+(cd emote && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/emote'
+install -m 775 red-bsl.py ssl.bin /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/emote'
+(cd eposcc && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposcc'
+install -m 775 eposcc /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin
+sed -e 's/^EPOS=.*$/EPOS=\/home\/mint32bits\/Desktop\/OpenEPOS-1.1RC/' -i /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin/eposcc
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposcc'
+(cd eposldr && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposldr'
+install eposldr /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposldr'
+(cd eposmkbi && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposmkbi'
+install -m 775 eposmkbi /home/mint32bits/Desktop/OpenEPOS-1.1RC/bin
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/eposmkbi'
+(cd plasma && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/plasma'
+make targets = count, opcodes, pi, test, run, tohex,bootldr, toimage, eterm
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/plasma'
+(cd xilinx && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/xilinx'
+Nothing to do here
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools/xilinx'
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/tools'
+(cd src && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src'
+(cd utility && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/utility'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/utility'
+(cd arch && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch'
+(cd arm7 && make)
+make[3]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch/arm7'
+install arm7_crt1.o arm7_crtbegin.o arm7_crtend.o arm7_crti.o arm7_crtn.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+make[3]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch/arm7'
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/arch'
+(cd mach && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach'
+(cd common && make)
+make[3]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/common'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/common'
+(cd mc13224v && make)
+make[3]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/mc13224v'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach/mc13224v'
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/mach'
+(cd abstraction && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/abstraction'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/abstraction'
+(cd setup && make)
+find: `mc13224v*': No such file or directory
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/setup'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/setup'
+(cd boot && make)
+find: `mc13224v*': No such file or directory
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/boot'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/boot'
+(cd system && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/system'
+install system_scaffold.o mc13224v_system.o
+install application_scaffold.o mc13224v_application.o
+install mc13224v_system.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+install mc13224v_application.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/system'
+(cd init && make)
+make[2]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/init'
+install init_first.o mc13224v_init_first.o
+install init_system.o mc13224v_init_system.o
+install init_application.o mc13224v_init_application.o
+install mc13224v_init_first.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+install mc13224v_init_system.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+install mc13224v_init_application.o /home/mint32bits/Desktop/OpenEPOS-1.1RC/lib
+make[2]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src/init'
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/src'
+(cd app && make)
+make[1]: Entering directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/app'
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/bin/eposcc -mcpu=arm7tdmi-s -D__mc13224v__  -Wall -mthumb-interwork -c -ansi -O2  -o structuredLEDControl.o structuredLEDControl.cc
+structuredLEDControl.cc: In function 'int LEDPowerEffect()':
+structuredLEDControl.cc:363: warning: comparison between signed and unsigned integer expressions
+structuredLEDControl.cc:378: warning: comparison between signed and unsigned integer expressions
+structuredLEDControl.cc:354: warning: unused variable 'j'
+structuredLEDControl.cc: In function 'void PWMInterrupt()':
+structuredLEDControl.cc:408: warning: comparison between signed and unsigned integer expressions
+structuredLEDControl.cc:409: warning: comparison between signed and unsigned integer expressions
+structuredLEDControl.cc:401: warning: unused variable 'turnOn'
+structuredLEDControl.cc: In function 'int main()':
+structuredLEDControl.cc:431: warning: unused variable 'thrdPWM'
+structuredLEDControl.cc:433: warning: unused variable 'thrdNIC'
+structuredLEDControl.cc:448: warning: unused variable 'status_thrdUART'
+structuredLEDControl.cc:451: warning: unused variable 'status_thrdEffect'
+/home/mint32bits/Desktop/OpenEPOS-1.1RC/bin/eposcc --library  --gc-sections -o structuredLEDControl structuredLEDControl.o
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_udivsi3.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_divsi3.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_umodsi3.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_modsi3.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_dvmd_tls.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_addsubdf3.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_muldivdf3.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_arm_fixunsdfsi.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_udivdi3.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_umoddi3.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: Warning: /usr/local/arm/gcc/bin/../lib/gcc/arm-elf/4.4.4//libgcc.a(_clzsi2.o) does not support interworking, whereas structuredLEDControl does
+/usr/local/arm/gcc/bin/arm-ld: section .ctors loaded at [00410000,00410037] overlaps section .text loaded at [00400870,00410443]
+/usr/local/arm/gcc/bin/arm-ld: structuredLEDControl: section .ctors vma 0x410000 overlaps previous sections
+/usr/local/arm/gcc/bin/arm-ld: structuredLEDControl: section .dtors vma 0x410038 overlaps previous sections
+/usr/local/arm/gcc/bin/arm-ld: structuredLEDControl: section .data vma 0x410048 overlaps previous sections
+/usr/local/arm/gcc/bin/arm-ld: structuredLEDControl: section .bss vma 0x41007c overlaps previous sections
+make[1]: *** [structuredLEDControl] Error 1
+make[1]: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC/app'
+make: *** [app] Error 2
+make: Leaving directory `/home/mint32bits/Desktop/OpenEPOS-1.1RC'
+
+MAKE ERROR:
+The start directory is /home/mint32bits/Desktop/INE5412_EposMotesII_SmartObjects/EPOS_MotesII_Lamps
+The current directory is /home/mint32bits/Desktop/OpenEPOS-1.1RC
+
+REMENBER, firstly run in order:
+./_copy.sh    PROGRAM_NAME.cc
+./_make.sh    PROGRAM_NAME.cc OPTION_NAME         Use 'clean' as 2nd parameter to perform a make veryclean all.
+./_process.sh PROGRAM_NAME.cc
+./_install.sh PROGRAM_NAME.cc USB_PORT_NUMBER     If not provided, default is 0. If passed more than 2 parameters,
+                                                  to install the program to the RAM memory, instead of the flash memory.
+
+_MAKE.SH ERROR! Could not to compile the program!
+
+COMPILE AND INSTALL HELP:
+The './compile_and_install.sh' parameters are:
+The FIRST parameter is the file name to install.
+The SECOND parameter is the USB port number to install.
+The THIRD parameter is the optional value clean for a 'make veryclean' all.
+Examples:
+./compile_and_install.sh PROGRAM_NAME.cc 0 clean
+./compile_and_install.sh PROGRAM_NAME.cc 1

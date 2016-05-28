@@ -1,12 +1,8 @@
 #!/bin/sh
 
 
-# Saves the current opened path, to restore it when this scripts finish.
-PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
-
 # Import the helper functions.
-. ./__helper_functions.sh
-
+. ./files/__helper_functions.sh
 
 # Read the command line argument. The programs name must to be without type extension.
 programFileToCompile=$1
@@ -20,7 +16,7 @@ programNameToCompile=$(echo $programFileToCompile | cut -d'.' -f 1)
 if ! [ -f $programFileToCompile ] \
      || [ $# -eq 0 ]
 then
-    printf "\nMAKE ERROR:\n Could not find $PWD_COMPILE_EPOS_LAMP/$programFileToCompile\n"
+    printf "\nMAKE ERROR:\n Could not find '$PWD_COMPILE_EPOS_LAMP/$programFileToCompile'\n"
     printHelp
     exit 1
 fi
@@ -50,8 +46,8 @@ fi
 # To compile the application passed as parameter '$programNameToCompile'
 if ! make APPLICATION=$programNameToCompile
 then
-    printf "\nMAKE ERROR:\nThe start directory is $PWD_COMPILE_EPOS_LAMP\n"
-    printf "The current directory is $EPOS\n"
+    printf "\nMAKE ERROR:\nThe start directory is '$PWD_COMPILE_EPOS_LAMP'\n"
+    printf "The current directory is '$EPOS'\n"
     printHelp
     exit 1
 fi

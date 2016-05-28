@@ -1,12 +1,8 @@
 #!/bin/sh
 
 
-# Saves the current opened path, to restore it when this scripts finish.
-PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
-
 # Import the helper functions.
-. ./__helper_functions.sh
-
+. ./files/__helper_functions.sh
 
 # The EPOSMotes2 installer
 EPOS_MOTES2_INSTALLER="red-bsl.py"
@@ -23,7 +19,7 @@ programNameToCompile=$(echo $programFileToCompile | cut -d'.' -f 1)
 if ! [ -f $programFileToCompile ] \
      || [ $# -eq 0 ]
 then
-    printf "\nPROCESS ERROR!\nCould not find $PWD_COMPILE_EPOS_LAMP/$programFileToCompile\n"
+    printf "\nPROCESS ERROR!\nCould not find '$PWD_COMPILE_EPOS_LAMP/$programFileToCompile'\n"
     printHelp
     exit 1
 fi
@@ -37,7 +33,7 @@ if arm-objcopy -I elf32-little -O binary img/$programNameToCompile.img img/$prog
 then
     printf "The arm-objcop $programFileToCompile was successful\n"
 else
-    printf "\nPROCESS ERROR!\nCould not to copy $programFileToCompile to $EPOS/app\n"
+    printf "\nPROCESS ERROR!\nCould not to copy '$programFileToCompile' to '$EPOS/app'\n"
     printHelp
     exit 1
 fi

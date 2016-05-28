@@ -4,6 +4,7 @@ REMENBER, firstly run in order:
 ./_make.sh    PROGRAM_NAME.cc OPTION_NAME         Use 'clean' as 2nd parameter to perform a make veryclean all.
 ./_process.sh PROGRAM_NAME.cc
 ./_install.sh PROGRAM_NAME.cc USB_PORT_NUMBER     If not provided, default is 0. If passed more than 2 parameters,
-                                                  to install the program to the RAM memory, instead of the flash memory.
+                                                  to install the program to the RAM memory, instead of the flash
+                                                  memory.
 
 

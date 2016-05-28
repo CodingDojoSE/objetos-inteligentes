@@ -3,14 +3,19 @@
 # Saves the current opened path, to restore it when this scripts finish.
 PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
-#import the helper functions.
+# Import the helper functions.
 . ./__helper_functions.sh
+
+# Current Version
+COMPILE_AND_INSTALL_VERSION="1.0"
+
+printf "Running the script './compile_and_install.sh' version $COMPILE_AND_INSTALL_VERSION...\n"
 
 
 # Print help to the output stream.
 printHelp()
 {
-    printf "\nCOMPILE AND INSTALL HELP:\n"
+    printf "\nCOMPILE AND INSTALL v$COMPILE_AND_INSTALL_VERSION HELP :\n"
     printf "The './compile_and_install.sh' parameters are:\n"
     printf "The FIRST parameter is the file name to install.\n"
     printf "The SECOND parameter is the USB port number to install.\n"
@@ -28,6 +33,21 @@ defaultFileToCompile="structuredLEDControl.cc"
 programFileToCompile=$1
 usbPortNumberToInstall=$2
 isVeryCleanCompilation=$3
+
+
+# Calculates whether the $isVeryCleanCompilation is a number
+isInteger $isVeryCleanCompilation
+
+# Captures the return value of the previous function call command
+isIntegerReturnValue=$?
+
+# Notify an invalid USB port number passed as parameter.
+if ! [ $isIntegerReturnValue -eq 1 ]
+then
+    usbPortNumberToInstallTemp=$usbPortNumberToInstall
+    usbPortNumberToInstall=$isVeryCleanCompilation
+    isVeryCleanCompilation=$usbPortNumberToInstallTemp
+fi
 
 
 # Notify an invalid file passed as parameter.
@@ -56,6 +76,7 @@ else
                 if sh _install.sh $programFileToCompile $usbPortNumberToInstall
                 then
                     printf "\nThe COMPILE_AND_INSTALL.SH was executed successfully!\n"
+                    showTheElapsedSeconds
                 else
                     printf "\n_INSTALL.SH ERROR! Could not to install the program into the EPOSMotes2!\n"
                     printHelp

@@ -4,16 +4,19 @@
 # Saves the current opened path, to restore it when this scripts finish.
 PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
-#import the helper functions.
+# Import the helper functions.
 . ./__helper_functions.sh
 
 
 # The new Trait.h file to changes the compiler scheduler
 NEW_SCHEDULER_FILE="traits.h"
 NEW_EPOS_COMPILER_FILE="eposcc"
+NEW_EPOS_MAKEDEFS_FILE="makedefs"
+NEW_EPOS_PLASMA_MAKEFILE_FILE="makefile_plasma"
 
 # Read the command line argument. The programs name must to be without type extension.
 programFileToCompile=$1
+secondCommandLineArgument=$2
 
 # Removed the file extension, just in case there exists.
 programNameToCompile=$(echo $programFileToCompile | cut -d'.' -f 1)
@@ -21,7 +24,7 @@ programNameToCompile=$(echo $programFileToCompile | cut -d'.' -f 1)
 # Notify when $EPOS environment variable is not found.
 if ! [ -f $EPOS/tools/makefile ]
 then
-    printf "\nINSTALL ERROR!\nCould not find the \$EPOS\n"
+    printf "\nINSTALL ERROR!\nCould not find the 'EPOS' environment variable or it is invalid.\n"
     printf "The start directory is '$PWD_COMPILE_EPOS_LAMP'\n"
     printf "The current directory is $EPOS\n"
     printHelp
@@ -46,7 +49,7 @@ if cp $PWD_COMPILE_EPOS_LAMP/$NEW_SCHEDULER_FILE $EPOS/include/
 then
     printf "The copy of '$NEW_SCHEDULER_FILE' to '$EPOS/include' was successful\n"
 else
-    printf "\nCOPY ERROR!\nCould not to copy $NEW_SCHEDULER_FILE to $EPOS/include\n"
+    printf "\nCOPY ERROR!\nCould not to copy '$NEW_SCHEDULER_FILE' to $EPOS/include\n"
     printHelp
     exit 1
 fi
@@ -55,9 +58,31 @@ fi
 # To install the new compiler.
 if cp $PWD_COMPILE_EPOS_LAMP/$NEW_EPOS_COMPILER_FILE $EPOS/tools/eposcc/
 then
-    printf "The copy of '$NEW_EPOS_COMPILER_FILE' to $EPOS/tools/eposcc/ was successful\n"
+    printf "The copy of '$NEW_EPOS_COMPILER_FILE' to '$EPOS/tools/eposcc/' was successful\n"
 else
-    printf "\nCOPY ERROR!\nCould not to copy $NEW_EPOS_COMPILER_FILE to $EPOS/include\n"
+    printf "\nCOPY ERROR!\nCould not to copy '$NEW_EPOS_COMPILER_FILE' to '$EPOS/include'\n"
+    printHelp
+    exit 1
+fi
+
+
+# To install the new makedefs file.
+if cp $PWD_COMPILE_EPOS_LAMP/$NEW_EPOS_MAKEDEFS_FILE $EPOS/
+then
+    printf "The copy of '$NEW_EPOS_MAKEDEFS_FILE' to '$EPOS/' was successful\n"
+else
+    printf "\nCOPY ERROR!\nCould not to copy '$NEW_EPOS_MAKEDEFS_FILE' to '$EPOS/'\n"
+    printHelp
+    exit 1
+fi
+
+
+# To install the new compiler.
+if cp $PWD_COMPILE_EPOS_LAMP/$NEW_EPOS_PLASMA_MAKEFILE_FILE $EPOS/tools/plasma/makefile
+then
+    printf "The copy of '$NEW_EPOS_PLASMA_MAKEFILE_FILE' to '$EPOS/tools/plasma/makefile' was successful\n"
+else
+    printf "\nCOPY ERROR!\nCould not to copy '$NEW_EPOS_PLASMA_MAKEFILE_FILE' to '$EPOS/plasma/makefile'\n"
     printHelp
     exit 1
 fi
@@ -78,18 +103,8 @@ else
 fi
 
 
-# Calculates whether the seconds program parameter is an integer number
-isInteger $2
-
-# Captures the return value of the previous function call command
-isIntegerReturnValue=$?
-
-# Print help when it is not passed a second command line argument integer
-if ! [ $isIntegerReturnValue -eq 1 ]
-then
-    printHelp
-fi
-
+# Print help to the output stream, when the second parameter is not an integer.
+tryPrintHelp $secondCommandLineArgument
 
 # Exits the program using a successful exit status code.
 exit 0

@@ -17,7 +17,7 @@ template <class Imp>
 struct Traits
 {
     static const bool enabled = true;
-    static const bool debugged = true;
+    static const bool debugged = false;
     static const bool power_management = false;
 };
 
@@ -25,10 +25,10 @@ struct Traits
 // Utilities
 template <> struct Traits<Debug>
 {
-    static const bool error   = 1;
-    static const bool warning = 1;
-    static const bool info    = 0;
-    static const bool trace   = 0;
+    static const bool error   = true;
+    static const bool warning = true;
+    static const bool info    = false;
+    static const bool trace   = false;
 };
 
 template <> struct Traits<Lists>: public Traits<void>
@@ -69,9 +69,9 @@ template <> struct Traits<System>: public Traits<void>
 template <> struct Traits<Serial_Display>: public Traits<void>
 {
     static const bool enabled = true;
-    static const int COLUMNS = 80;
+    static const int COLUMNS = 120;
     static const int LINES = 24;
-    static const int TAB_SIZE = 8;
+    static const int TAB_SIZE = 4;
 };
 
 
@@ -98,7 +98,7 @@ template <> struct Traits<Thread>: public Traits<void>
     typedef Scheduling_Criteria::Round_Robin Criterion;
     static const bool smp = false;
     static const bool trace_idle = false;
-    static const unsigned int QUANTUM = 1000; // us
+    static const unsigned int QUANTUM = 5000; // us
 };
 
 template <> struct Traits<Alarm>: public Traits<void>

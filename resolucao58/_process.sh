@@ -4,7 +4,7 @@
 # Saves the current opened path, to restore it when this scripts finish.
 PWD_COMPILE_EPOS_LAMP=$(dirname $(readlink -f $0))
 
-#import the helper functions.
+# Import the helper functions.
 . ./__helper_functions.sh
 
 
@@ -13,6 +13,7 @@ EPOS_MOTES2_INSTALLER="red-bsl.py"
 
 # Read the command line argument. The programs name must to be without type extension.
 programFileToCompile=$1
+secondCommandLineArgument=$2
 
 # Removed the file extension, just in case there exists.
 programNameToCompile=$(echo $programFileToCompile | cut -d'.' -f 1)
@@ -45,18 +46,8 @@ fi
 # Switch back to the start command line folder.
 cd $PWD_COMPILE_EPOS_LAMP
 
-# Calculates whether the seconds program parameter is an integer number
-isInteger $2
-
-# Captures the return value of the previous function call command
-isIntegerReturnValue=$?
-
-# Print help when it is not passed a second command line argument integer
-if ! [ $isIntegerReturnValue -eq 1 ]
-then
-    printHelp
-fi
-
+# Print help to the output stream, when the second parameter is not an integer.
+tryPrintHelp $secondCommandLineArgument
 
 # Exits the program using a successful exit status code.
 exit 0

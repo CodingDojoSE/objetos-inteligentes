@@ -42,7 +42,7 @@ C_LINK_OBJS=
 C_LINK_LIBS=
 
 CPP_COMPILER="$TOOLS_PREFIX""g++"
-# --std=c++0x below is the --std=c++11 support on earlier version of gcc.
+# --std=c++0x below is the c++11 support on earlier version of gcc.
 CPP_COMP_FLGS="--no-exceptions --no-rtti --no-use-cxa-atexit"
 CPP_COMP_HDRS=
 CPP_LINK_FLGS=

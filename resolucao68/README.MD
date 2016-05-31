@@ -28,5 +28,21 @@ https://github.com/evandrocoan/INE5412_EposMotesII_SmartObjects
 Siga o manual na nossa primeiro página do github:
 https://github.com/CodingDojoSE/objetos-inteligentes
 
+#ATUALIZAÇÃO 31/05/2016: Usar o sensor de ilumincação com ADC 
+
+Ligamos os 3 pinos do sensor de iluminação recebido pelo professor nos seguintes pinos do modulo J2 do EPOS:
+ Pino 1: VCC
+ Pino 11: ADC7
+ Pino 20: GND
+
+Instanciamos um objeto do tipo ADC para ler o valor recebido no ADC7, que é correspondente a iluminação lida pelo sensor
+  documentação do ADC: http://epos.lisha.ufsc.br/EPOS+User+Guide#ADC
+
+Arquivo com o código para ler o ADC:
+  adc_light_sensor.cc
+  
+
+ 
+
 
 

@@ -146,7 +146,8 @@ void PWMInterrupt();
  */
 int main()
 {
-    const char* const PROGRAM_VERSION = "2.1";
+  
+  const char* const PROGRAM_VERSION = "2.1";
     
     PRINTLN( 1, "EposMotesII app initing..." ); 
     PRINTLN( 1, "Program version: " << PROGRAM_VERSION );
@@ -154,7 +155,7 @@ int main()
 #if defined DEBUG
     myClassObjectTest();
 #endif
-    
+   
     PRINTLN( 1, "To send commands to the EPOSMotes2 by USB device, use:" );
     PRINTLN( 1, "echo :R100 > /dev/ttyUSB0" );
     PRINTLN( 1, "Try also :REN, :BEN, :GEN or :AEN" ); 
@@ -209,6 +210,20 @@ int main()
     // ledEffectThread messages.
     Alarm::delay( 1e6 );
     
+    
+    ADC adc( ADC::SINGLE_ENDED_ADC7 );
+    adc.enable();
+    PRINTLN( 1, "THE GREAT LIGHT VALUE IS: " << adc.get() );
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // The join() method suspends the execution of the calling thread (i.e., the
     // thread that is running) until the called thread finishes its execution.
     PRINTLN( 1, "Waiting for uartThread to finish" );
@@ -220,6 +235,11 @@ int main()
     
     DEBUGGER( 1, "ledEffectThreadStatus: " << ledEffectThreadStatus );
     PRINTLN( 1, "Threads finished. EposMotesII app finishing" );
+    
+    
+    
+    
+    
     
     //Lista das pessoas que se importam com essa parte do código:
     //Evandro  Coan
